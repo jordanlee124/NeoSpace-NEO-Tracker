@@ -1,0 +1,160 @@
+<html style="overflow-y: hidden;">
+    <head>
+        <title>NEOspace</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <!--CSS link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+        crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+        crossorigin="anonymous"></script>
+        <script src="JavaScript/sidebars.js"></script>
+        <script src="JavaScript/phaser/jquery-2.0.3.min.js" type="text/javascript"></script>
+        <script src="JavaScript/phaser/phaser.2.6.2.min.js" type="text/javascript"></script>
+        <script src="JavaScript/phaser/blob.js" type="text/javascript"></script>
+        <script src="JavaScript/phaser/canvas-to-blob.js" type="text/javascript"></script>
+        <script src="JavaScript/phaser/filesaver.js" type="text/javascript"></script>
+        <script src="JavaScript/phaser/embed.js" type="text/javascript"></script>
+        <script src="JavaScript/NEOs.js"></script>
+    </head>
+    <body style="background-color: rgb(0,0,0);">
+        <div style="margin-left: auto;margin-right: auto; width:0px;">
+            <header id="header" class="container mx-auto" style="display: block; position: fixed; transform: translate(-560px,0); width: 0px;">   
+                <img class="img_btn center" id="earth" onclick="pic_of_day()" style = "border-radius: 50%; transform: translate(0, 650px);" src="Images/Earth.png"  width="1000" height="1000">
+            </header>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #192931">
+          <a class="navbar-brand" href="index"><img src="Images/logo.png" style="width: 70px; height: auto; margin-left: 10px;"></a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;"  href="mainPage">HOME</a>
+                <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="MarsRover">MARS ROVERS</a>
+                <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="NEOs">NEOS</a>
+                <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;"  href="community_images">COMMUNITY IMAGES</a>
+                <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="educationalPage">EDUCATION</a>
+                <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="picOfDay">PICTURE OF THE DAY</a>
+              </div>
+          </div>
+        </nav>
+        
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>    
+            <div class="dropdown">
+                <button onclick="myFunction('dropdown-approach')" class="dropbtn">Approach Date <i class="fa fa-caret-down" style="position: absolute; right: 15px; font-size: 20px;"></i></button>
+                <div id="dropdown-approach" class="dropdown-content">
+                    <input type="date" class="input" id="ApproachDate">
+                    <input class="submitbtn" type="submit" value="Search" onclick="dateInput('ApproachDate', 'ApproachDate')"/><br>
+
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="myFunction('dropdown-time')" class="dropbtn" >Time Range<i class="fa fa-caret-down" style="position: absolute; right: 15px; font-size: 20px;"> </i></button>
+                <div id="dropdown-time" class="dropdown-content">
+                    <label for="start-date">Enter Start Date:</label>
+                    <input type="date" class="input" id="start-date">
+                    <label for="end-date">Enter End Date:</label>
+                    <input type="date" class="input" id="end-date">
+                    <input class="submitbtn" type="submit" value="Search" onclick="dateInput('start-date', 'end-date')"/><br>
+        
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction('dropdown-name')" class="dropbtn">NEO Id <i class="fa fa-caret-down" style="position: absolute; right: 15px; font-size: 20px;"></i></button>
+                <div id="dropdown-name" class="dropdown-content">
+                <input class="input" id='search-name' placeholder="Enter NEO IDs"></input>
+                <input class="submitbtn" type="submit" value="Search" onclick="idInput()"/><br>
+            </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="myFunction('dropdown-orbit')" class="dropbtn">Orbiting Body <i class="fa fa-caret-down" style="position: absolute; right: 15px; font-size: 20px;"></i></button>
+                <div id="dropdown-orbit" class="dropdown-content">
+                    <select class="input" id="orbit-body">
+                        <option value="Mercury">Mercury</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Jupiter">Jupiter</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Uranus">Uranus</option>
+                        <option value="Neptune">Neptune</option>
+                        <option value="Pluto">Pluto</option>
+                    </select>
+                    <input class="submitbtn" type="submit" value="Search" onclick="orbitBodyInput()"/><br>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="myFunction('dropdown-hazard')" class="dropbtn">Is Hazardous? <i class="fa fa-caret-down" style="position: absolute; right: 15px; font-size: 20px;"></i></button>
+                <div id="dropdown-hazard" class="dropdown-content">
+                    <input class="radioSelectYes" type="radio" name="hazard" id="hazardous">
+                    <label for="hazardous">Yes</label>
+                    <input class="radioSelectNo" type="radio" name="hazard" id="nothazardous">
+                    <label for="nothazardous" style="position: absolute; left: 38%;">No</label>
+                    <input class="submitbtn" type="submit" value="Search" onclick="hazardInput()"/><br>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="myFunction('dropdown-sentry')" class="dropbtn">Is Sentry Object? <i class="fa fa-caret-down" style="position: absolute; right: 15px; font-size: 20px;"></i></button>
+                <div id="dropdown-sentry" class="dropdown-content">
+                    <input class="radioSelectYes" type="radio" name="hazard" id="sentry" value="true">
+                    <label for="sentry">Yes</label>
+                    <input class="radioSelectNo" type="radio" name="hazard" id="notsentry" value="false">
+                    <label for="notsentry" style="position: absolute; left: 38%;">No</label>
+                    <input class="submitbtn" type="submit" value="Search" onclick="sentryInput()"/><br>
+                </div>
+            </div>
+
+        </div>
+         
+        <div id="rightSidebar" class="rightSidebar" close>
+            <a class="closebtn" onclick="closeRight()">Close &times;</a>            
+
+            <h1 id="neoTitle" style="align-self:center;"></h1>
+            <p id = "neoName"></p> 
+            <p id = "neoId"></p>
+            <p id = "neoSize"></p>
+            <p id = "neoAbsMag"></p>
+            <p id = "neoHazard"></p>
+            <p id = "neoSentry"></p> <br> <br> <br> <br>        
+            
+            
+            <h3 id="CAD" style="color: white; white-space: nowrap;">Close Approach Data</h3>
+            <p id = "currApproach" style="top: 0px;"></p>
+            <p id = "firstApproach" style="top: 0px;"></p>
+            <p id = "lastApproach" style="top: 0px;" ></p>
+            <p id = "missDistance" style="top: 0px;" ></p>
+            <p id = "orbitingBody" style="top: 0px;" ></p>
+            <p id = "relVelocity" style="top: 0px;" ></p>
+
+            <br><br>
+            
+            <h3 id="orbital" style="color: white; white-space: nowrap;">Orbit Data</h3>
+            <p id = "orbitalId" style="top: 0px;" ></p>
+            <p id = "orbitClass" style="top: 0px;" ></p>
+            <p id = "orbitDesc" style="top: 0px;" ></p>
+            <p id = "firstObserved" style="top: 0px;" ></p>
+            <p id = "lastObserved" style="top: 0px;" ></p>
+            <p id = "orbitalPeriod" style="top: 0px;" ></p>
+
+            
+        </div>
+        <div id="main">
+            <button class="openbtn" id="openSidebar" onclick="openNav()">&#9776; Choose Filters </button>
+        </div>
+
+        <!--button class="nav-link btn" style="position: fixed; bottom: 64px; right: 64px; border-radius: 15px; background-color: #192931; color: rgb(156, 156, 156); font-weight: bold;" onclick="openForm()"> CHAT </button-->
+        
+        <!--div class="chat-popup" id="myForm" style="display: none; position: fixed; bottom: 64px; right: 64px;">
+            <iframe src="http://127.0.0.1:5000/" style="border-radius: 15px; height: 400px;"></iframe>
+            <button class="nav-link btn" style="position: fixed; bottom: 64px; right: 64px; border-radius: 15px; background-color: #192931; color: rgb(156, 156, 156); font-weight: bold;" onclick="closeForm()">CLOSE</button>
+        </div-->
+    
+    </body>
+</html>

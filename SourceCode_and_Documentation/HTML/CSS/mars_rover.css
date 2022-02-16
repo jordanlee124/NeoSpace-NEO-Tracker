@@ -1,0 +1,515 @@
+*
+html {
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+body {
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100%;
+    background: -webkit-linear-gradient(59deg, #192931, #070b0e);
+    background: linear-gradient(59deg, #192931, #070b0e);
+    display: flex;
+    flex-direction: column;
+}
+btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.top_images {
+    position:absolute;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255,0.5);
+    margin: 6px 0;
+}
+
+.background_square {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgb(214, 214, 214);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.row {
+    display: flex;
+}
+  
+
+.column {
+    flex: 50%;
+}
+
+#header{
+    margin: 64px;
+    height:1000px;
+    left:50%;
+    transform: translate(-50%, 0);
+}
+
+#info {
+  margin-left: 64px;
+  margin-top: 64px;
+}
+
+.tab-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.tab-pane {
+   padding-bottom: 64px;
+}
+
+.img_p {
+  display: inline-block;
+}
+
+
+/*FOOTER*/
+
+footer {
+  background: #16222A;
+  background: -webkit-linear-gradient(59deg, #192931, #070b0e);
+  background: linear-gradient(59deg, #192931, #070b0e);
+  color: white;
+  margin-top: auto;
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+}
+
+.marstext {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+/* The button used to open the sidebar */
+.openmarsbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(214, 214, 214);
+    text-align: center;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    visibility: visible;
+}
+
+.openmarsbtn:hover {
+    background-color: rgb( 27, 115, 249);
+}
+
+
+/*SOCİAL İCONS*/
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: rgb(214, 214, 214);
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position:absolute;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    top: 10px;
+    right: 15px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    visibility: visible;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/*Dropdown and contents in sidebar*/
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropbtn {
+    background-color: rgb(26, 41, 49);
+    width: 250px;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+    
+.dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(54, 70, 75);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    width: 250px;
+    display: none;
+    position: relative;
+    background-color: #a2a3a8;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+/* filters */
+.submitbtn {
+    background-color:rgb(54, 56, 58);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute; 
+    right: 15px;
+    height: 25px;
+}
+
+.input {
+    width: 65%;
+    height: 25px;
+}
+
+input[type=radio] {
+    width: 5%;
+    padding-right: 30px;
+}
+
+.radioSelectNo {
+    position: relative;
+    left: 10%;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+.img_btn:hover {
+    background: linear-gradient(159deg, #243c47 30%, #131d25);
+  }
+
+
+/* Full-width textarea */
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+
+  /* The rightSidebar displaying NEO info */
+.rightSidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 0px; /* change with js*/
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.rightSidebar .closebtn {
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    cursor: pointer;
+}
+
+.rightSidebar h1 {
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+}
+
+.rightSidebar p {
+    position: relative;
+    color: rgb(234, 234, 238);
+    padding-top: 5px;
+    top: 60px;
+    white-space: nowrap;
+}
+
+.carousel-caption {
+    color:black;
+}

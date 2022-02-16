@@ -1,0 +1,232 @@
+  
+<html style="overflow-x: hidden;">
+    <head>
+        <title>NEOspace</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <!--CSS link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+        crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+        crossorigin="anonymous"></script>
+        <script src="JavaScript/likes.js"></script>
+    </head>
+    <body style="background-color: rgb(0,0,0);">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #192931">
+            <a class="navbar-brand" href="index"><img src="Images/logo.png" style="width: 70px; height: auto; margin-left: 10px;"></a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;"  href="mainPage">HOME</a>
+                  <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="MarsRover">MARS ROVERS</a>
+                  <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="NEOs">NEOS</a>
+                  <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;"  href="community_images">COMMUNITY IMAGES</a>
+                  <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="educationalPage">EDUCATION</a>
+                  <a class="nav-item nav-link" style="color: rgb(156, 156, 156); font-weight: bold;" href="picOfDay">PICTURE OF THE DAY</a>
+                </div>
+            </div>
+        </nav>
+        <div style="margin-left: auto;margin-right: auto; width:60px;">
+          <header id="header" class="container mx-auto" style="display: block; position: fixed; transform: translate(-620px,0);">   
+            <section class="py-5 text-center container">
+              <div class="row py-lg-5">
+                  <h1 class="display-4 font-weight-normal text-center" style="color: rgb(156, 156, 156); font-weight: bold;">COMMUNITY IMAGES</h1>          
+              </div>
+          </section>
+          </header>
+        </div>
+        <div class="background_square" id="background_square" style="transform: translate(0, 650px);">
+          <p class="marstext" style="padding-top: 10px;">Connect with other users interested in space and share your favourite space-themed image! If you particularly like any of the images on the page, click on them to 'like', and see if you can get them to the top!</p>
+          <div class="marstext" style="position: fixed; color: black; position: relative;">Upload your own photos here!</div>  
+          <input type="file" class="file-select" style="position:absolute; margin-left: 64px; margin-top: 10px; border-radius: 15px; background-color: #192931; color: rgb(156, 156, 156); font-weight: bold;" accept="image/*"/>
+          <button class="file-submit btn" style="position: relative; border-radius: 10px; padding: 4px; background-color: #192931; color: rgb(156, 156, 156);float: left; left: 450px; font-weight: bold; transform: translate(0, 8px);">UPLOAD</button>
+        </div>
+
+
+        <footer class="mainfooter" role="contentinfo" style="transform: translate(0,550px);">
+          <div class="footer-middle">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <!--Column1-->
+                <div class="footer-pad">
+                  <h4>About us</h4>
+                  <ul class="list-unstyled">
+    
+                    <p style="font-size:14px">NEO Space is dedicated to making content on near Earth Objects(NEOs) more accessible for everyone.</p>
+                    <img src="Images/Logo.png" height="60px" style="transform:translate(20,0px)"> 
+    
+    
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!--Column2-->
+                <div class="footer-pad">
+                  <h4>Links to other pages</h4>
+                  <ul class="list-unstyled">
+    
+                    <li><a href="index">Landing Page</a></li>
+                    <li><a href="mainPage">Home</a></li>
+                    <li><a href="MarsRover">Mars Rover</a></li>
+                  </ul>
+                  
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!--Column3-->
+                <div class="footer-pad">
+                  <h4><br></h4>
+                  <ul class="list-unstyled">
+                      
+                      <li><a href="community_images">Community Images</a></li>
+                      <li><a href="educationalPage">Education</a></li>
+                      <li><a href="picOfDay">Picture of the Day</a></li> 
+                    <li>
+                      <a href="#"></a>
+                    </li>
+                  </ul> 
+                </div> 
+              </div> 
+              <div class="col-md-3">
+                <h4>Follow Us</h4>
+                    <ul class="social-network social-circle">
+                     <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                     <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li> 
+                    </ul>				
+            </div> 
+            </div>
+          <div class="row">
+            <div class="col-md-12 copy">
+              <p class="text-center">&copy; Copyright 2021 - NEO SPACE.  All rights reserved.</p>
+            </div>
+          </div>
+        
+        
+          </div>
+          </div>
+        </footer>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+            
+        <script type="module">
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBHJw52lY0yG0VRIqY-1WaRI7zXGoPXD7g",
+            authDomain: "neospace-1617672865286.firebaseapp.com",
+            projectId: "neospace-1617672865286",
+            storageBucket: "neospace-1617672865286.appspot.com",
+            messagingSenderId: "956665702992",
+            appId: "1:956665702992:web:797e483a86838993e9ff55",
+            measurementId: "G-TP48K6D72S"
+        };
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const storageService = firebase.storage();
+        const storageRef = storageService.ref();
+        var database = firebase.database();
+
+        $('#List').find("tbody").html("");
+
+        var i = 0;
+        firebase.database().ref().get().then((value)=>{
+            var object = value.val()
+            var new_array = []
+            while (Object.keys(object).length != 0) {
+                var largest = {likes: 0};
+                for (var item in object) {
+                    if (object[item]["likes"] >= largest["likes"]) {
+                        largest = object[item]
+                        largest.key = item
+                    }
+                }
+                //add largest image
+                var new_obj = {}
+                new_obj[largest.key] = largest
+                new_array.push(new_obj)
+                delete object[largest.key]
+                console.log(new_array)
+            } 
+            var objnum = 0;
+            new_array.forEach((element)=>{
+                objnum++;
+                var container = document.createElement("div")
+                console.log(Object.keys(element)[0])
+                var url = element[Object.keys(element)[0]].url;
+                var likes = element[Object.keys(element)[0]].likes;
+                if (objnum == 1) {
+                  container.setAttribute("style", "width: 350px; height: 350px; margin: 64px; margin-left: 0px; float:left; border-style: solid; background: url(" + url + ") 50% 50% no-repeat; background-size:cover;")
+                } else {
+                  container.setAttribute("style", "width: 350px; height: 350px; margin: 64px; float:left; border-style: solid; background: url(" + url + ") 50% 50% no-repeat; background-size:cover;")
+                }
+
+                //var image = document.createElement("img");
+                var likestext = document.createElement("h1");
+                likestext.setAttribute("id", Object.keys(element)[0] + "likes")
+                likestext.innerHTML = likes;
+                //image.setAttribute("src", url)
+                container.setAttribute("class", "community_btn")
+                container.setAttribute("id", Object.keys(element)[0])
+                //container.appendChild(image)
+                container.appendChild(likestext)
+                //image.setAttribute("style", "width: 344px; height: auto; position: absolute;")
+                likestext.setAttribute("style", "margin: 10px; position: fixed; color: yellow; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;  ")
+                document.getElementById("background_square").appendChild(container)
+                document.getElementById(Object.keys(element)[0]).setAttribute("onclick", "like("+Object.keys(element)[0]+")")
+                i++;
+            })
+        })
+
+        document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+        document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
+
+        let selectedFile;
+        function handleFileUploadChange(e) {
+        selectedFile = e.target.files[0];
+        }
+
+        function handleFileUploadSubmit(e) {
+        const uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
+        var loading = document.createElement("div")
+        if (document.getElementById("loading") != undefined) {
+          document.getElementById("loading").remove()
+        }
+        loading.innerHTML = "Uploading..."
+        loading.setAttribute("id", "loading")
+        loading.setAttribute("style", "position: fixed; top:128px; left:500px")
+        document.getElementById("background_square").appendChild(loading)
+        
+        uploadTask.on('state_changed', (snapshot) => {
+        // Observe state change events such as progress, pause, and resume
+        }, (error) => {
+            // Handle unsuccessful uploads
+            console.log(error);
+        }, () => {
+            var url = storageRef.child('images/'+selectedFile.name).getDownloadURL().then(function(url){
+                // Do something once upload is complete
+                console.log(selectedFile.name.toString())
+                firebase.database().ref(selectedFile.name.replace(".", "")).set({
+                    url : url,
+                    likes: 0
+                })
+                console.log('success');
+                document.getElementById("loading").innerHTML = "Done!"
+            })
+        });
+        }
+
+        </script>
+    </body>
