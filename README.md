@@ -18,3 +18,6 @@ The website is currently not uploaded to the internet, so to explore our website
 Then unzip the file and navigate to the HTML file with all the pages are (SourceCode_and_Documentation/HTML/)
 
 To simulate first landing on the page, click on the *index* page and enjoy the site! 
+
+## Extra Note
+We were tasked to write up a report for this project. If you would like to check this out, go to the *Deliverables* directory.
